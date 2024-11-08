@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Detail</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="recipe-detail">
+    <div class="recipe-card" id="detail-card">
+      <h3 id="recipe-name"></h3>
+      <p><strong>Ingredients:</strong> <span id="recipe-ingredients"></span></p>
+      <p><strong>Instructions:</strong> <span id="recipe-instructions"></span></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Recipe Sharing Platform</p>
+  </footer>
+
+  <script>
+    // Retrieve the selected recipe from localStorage
+    const selectedRecipe = JSON.parse(localStorage.getItem('selectedRecipe'));
+
+    // Populate the recipe details on the page
+    document.getElementById('recipe-name').textContent = selectedRecipe.name;
+    document.getElementById('recipe-ingredients').textContent = selectedRecipe.ingredients.join(', ');
+    document.getElementById('recipe-instructions').textContent = selectedRecipe.instructions;
+  </script>
+
+</body>
+</html>

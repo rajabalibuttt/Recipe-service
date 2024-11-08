@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Sharing Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#upload">Upload Recipe</a></li>
+        <li><a href="#planner">Meal Planner</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Recipe Share</h1>
+    <p>Find, share, and create your favorite recipes.</p>
+  </section>
+
+  <!-- Recipe Section -->
+  <section id="recipes">
+    <h2>Recipes</h2>
+    <input type="text" id="ingredientSearch" placeholder="Search by ingredient">
+    <div id="recipe-list">
+      <!-- Recipe cards will appear here -->
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section id="upload">
+    <h2>Upload Your Recipe</h2>
+    <form id="recipeForm">
+      <label for="recipeName">Recipe Name:</label>
+      <input type="text" id="recipeName" required><br><br>
+
+      <label for="ingredients">Ingredients (comma-separated):</label>
+      <input type="text" id="ingredients" required><br><br>
+
+      <label for="instructions">Instructions:</label>
+      <textarea id="instructions" required></textarea><br><br>
+
+      <button type="submit">Upload Recipe</button>
+    </form>
+  </section>
+
+  <!-- Meal Planner Section -->
+  <section id="planner">
+    <h2>Meal Planner</h2>
+    <p>Plan your meals for the week:</p>
+    <div id="meal-plan">
+      <!-- Meal plan will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Recipe Share. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
